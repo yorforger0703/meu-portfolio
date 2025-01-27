@@ -360,8 +360,8 @@ span {
     background: var(--bg-color);
     border-radius: 4rem;
     font-size: 1.1rem;
-    color: blue;
-    border: 2px solid blue;
+    color: rgb(0, 140, 255);
+    border: 2px solid rgb(0, 140, 255);
     letter-spacing: 0.1rem;
     font-weight: 500;
     transition: 0.3s ease;
