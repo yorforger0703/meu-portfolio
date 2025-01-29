@@ -475,7 +475,16 @@ span {
     }
 }
 
-
+.acessibilidade{
+    margin-top: 2rem;
+    padding: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 200;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 
 
