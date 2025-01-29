@@ -406,113 +406,75 @@ span {
 
 .projetos {
     background: var(--second-bg-color);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projetos-heading{
+    margin-bottom: 18px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 5rem;
 }
 
 .projetos-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.projetos-container button{
-    background-color: var(--main-color);
-    height: 300px;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.projeto-fundo{
-    background-image: url(images/WhatsApp\ Image\ 2025-01-27\ at\ 17.51.23_099d933f.jpg);
-    background-color: var(--main-color);
-    height: 300px;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.projeto-fundo1{
-    background-image: url(images/WhatsApp\ Image\ matricula.jpg);
-    background-color: var(--main-color);
-    height: 300px;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.projeto-fundo2{
-    background-image: url(images/WhatsApp\ Image\ hairday.jpg);
-    background-color: var(--main-color);
-    height: 300px;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.projeto-fundo:hover {
-    background-image: url(images/Screenshot\ sunnyguru.png);
-    color: var(--main-color);
-    transform: scale(1.03);
-    border: 1px solid var(--main-color);
-}
-
-.projeto-fundo1:hover {
-    background-image: url(images/Screenshot\ matricula.png);
-    color: var(--main-color);
-    transform: scale(1.03);
-    border: 1px solid var(--main-color);
-}
-
-.projeto-fundo2:hover {
-    background-image: url(images/Screenshot\ 2025-01-27\ 171239.png);
-    color: var(--main-color);
-    transform: scale(1.03);
-    border: 1px solid var(--main-color);
-}
-
-.projeto-fundo .projeto-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    padding: 5rem;
 }
-
-.projeto-fundo1 .projeto-info {
-    display: flex;
-    flex-direction: column;
+.projeto-card {
+    background: rgb(168, 35, 35);
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    transition: 0.3s;
     text-align: left;
-    max-height: 200px;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem;
+    text-decoration: none;
+    display: block;
 }
-
-.projeto-fundo2 .projeto-info {
+.projeto-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px black;
+}
+.projeto-header {
     display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 200px;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.tag {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.tag.html { background: #e34c26; color: #fff; border: 2px solid rgba(0, 0, 0, 0.589); }
+.tag.css { background: #264de4; color: #fff; border: 2px solid rgba(0, 0, 0, 0.589); }
+.tag.javascript { background: #fbf861; color: #000; border: 2px solid rgba(0, 0, 0, 0.589); }
+.projeto-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.projeto-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.projeto-content p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+@media (max-width: 768px) {
+    .projetos-container {
+        grid-template-columns: 1fr;
+    }
+    .projeto-card {
+        width: 100%;
+    }
 }
 
-.projeto-info h4 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-
-.projeto-info p {
-    font-size: 1.6rem;
-    font-weight: 400;
-    max-height: 100px;
-    margin: auto;
-}
 
 
 
@@ -605,8 +567,8 @@ span {
 
 @media screen and (max-width:600px) {
     .qualificacoes .container {
-        margin: 0;
-        padding: 0;
+        margin: 5px;
+        padding: 0.5rem;
     }
 
     .qualificacoes .container .row {
@@ -703,11 +665,12 @@ span {
     top: 22px;
     width: 0;
     z-index: 1;
-    right: 30px;
+    left: 30px;
     border: medium solid var(--main-color);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--main-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--main-color) transparent transparent;
 }
+
 
 .servicos .right::after {
     left: -16px;
