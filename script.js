@@ -1,10 +1,23 @@
-const texts = [
-    "Estudante de ADS",
-    "Desenvolvedora Web",
-    "Web Designer",
-    "Desenvolvedora de Sistemas",
-    "Desenvolvedora Front-end"
-];
+let texts = [];
+if (window.innerWidth <= 600) {
+    texts = [
+        "Estudante de ADS",
+        "Dev Web",
+        "Web Designer",
+        "Dev de Sistemas",
+        "Dev Front-end"
+    ];
+} else {
+    texts = [
+        "Estudante de ADS",
+        "Desenvolvedora Web",
+        "Web Designer",
+        "Dev de Sistemas",
+        "Dev Front-end"
+    ];
+}
+
+
 const typingSpan = document.querySelector(".typing-text span");
 let textIndex = 0;
 
@@ -30,16 +43,19 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
+
         if (top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav ul li a[href*=' + id + ']').classList.add('active')
-            })
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            document.querySelector('header nav ul li a[href*=' + id + ']').classList.add('active');
         }
-    })
-}
+    });
+};
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}
+};

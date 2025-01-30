@@ -82,6 +82,10 @@ html::-webkit-scrollbar-thumb {
     border-bottom: 3px solid var(--main-color);
 }
 
+.navbar a:not(.active):hover {
+    border-bottom: 3px solid transparent;
+}
+
 #menu-icon {
     font-size: 3.6rem;
     color: var(--main-color);
@@ -132,7 +136,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 
-.heading{
+.heading {
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -240,6 +244,8 @@ span {
     min-width: 280px;
     position: relative;
     display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .typing-text span {
@@ -249,6 +255,17 @@ span {
     vertical-align: top;
     border-right: 3px solid var(--main-color);
     animation: typing 5s steps(30, end) infinite, blink 0.6s step-end infinite;
+    width: 0;
+}
+
+@media (max-width: 600px) {
+    .typing-text {
+        white-space: nowrap;
+    }
+
+    .typing-text span {
+        width: 0;
+    }
 }
 
 
@@ -290,12 +307,15 @@ span {
     0% {
         width: 0;
     }
+
     40% {
         width: 100%;
     }
+
     60% {
         width: 100%;
     }
+
     100% {
         width: 0;
     }
@@ -339,78 +359,13 @@ span {
 
 
 
-
-.btn-linguagem1 {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--bg-color);
-    border-radius: 4rem;
-    font-size: 1.1rem;
-    color: orangered;
-    border: 2px solid orangered;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.btn-linguagem2 {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--bg-color);
-    border-radius: 4rem;
-    font-size: 1.1rem;
-    color: rgb(0, 140, 255);
-    border: 2px solid rgb(0, 140, 255);
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.btn-linguagem3 {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--bg-color);
-    border-radius: 4rem;
-    font-size: 1.1rem;
-    color: yellow;
-    border: 2px solid yellow;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.link-1,
-.link-2,
-.link-3 {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 0.2rem 2rem;
-    background: transparent;
-    border-radius: 0;
-    font-size: 1.1rem;
-    color: orangered;
-    border: 2px solid orangered;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-
-
 .projetos {
     background: var(--second-bg-color);
     padding: 50px 20px;
     text-align: center;
 }
 
-.projetos-heading{
+.projetos-heading {
     margin-bottom: 18px;
     align-items: center;
     justify-content: center;
@@ -424,6 +379,7 @@ span {
     gap: 20px;
     justify-content: center;
 }
+
 .projeto-card {
     background: rgb(168, 35, 35);
     border-radius: 12px;
@@ -434,48 +390,71 @@ span {
     text-decoration: none;
     display: block;
 }
+
 .projeto-card:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px black;
 }
+
 .projeto-header {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     margin-bottom: 10px;
 }
+
 .tag {
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: bold;
 }
-.tag.html { background: #e34c26; color: #fff; border: 2px solid rgba(0, 0, 0, 0.589); }
-.tag.css { background: #264de4; color: #fff; border: 2px solid rgba(0, 0, 0, 0.589); }
-.tag.javascript { background: #fbf861; color: #000; border: 2px solid rgba(0, 0, 0, 0.589); }
+
+.tag.html {
+    background: #e34c26;
+    color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.589);
+}
+
+.tag.css {
+    background: #264de4;
+    color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.589);
+}
+
+.tag.javascript {
+    background: #fbf861;
+    color: #000;
+    border: 2px solid rgba(0, 0, 0, 0.589);
+}
+
 .projeto-content img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
 .projeto-content h4 {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
+
 .projeto-content p {
     font-size: 1rem;
     opacity: 0.8;
 }
+
 @media (max-width: 768px) {
     .projetos-container {
         grid-template-columns: 1fr;
     }
+
     .projeto-card {
         width: 100%;
     }
 }
 
-.acessibilidade{
+.acessibilidade {
     margin-top: 2rem;
     padding: 3rem;
     font-family: 'Poppins', sans-serif;
