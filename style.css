@@ -188,6 +188,7 @@ span {
 .sobre-img img:hover {
     transform: scale(1.01);
     filter: drop-shadow(0 0 25px var(--main-color));
+    transition: 0.3s ease;
 }
 
 .sobre-content p {
