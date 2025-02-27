@@ -164,7 +164,7 @@ section {
 }
 
 span {
-    color: var(--main-color)
+    color: var(--main-color);
 }
 
 .sobre-content h3 {
@@ -505,6 +505,7 @@ span {
     width: 70%;
     margin: auto;
     margin-top: 2rem;
+    text-align: center;
 }
 
 .qualificacoes .container .row {
@@ -558,6 +559,8 @@ span {
     .qualificacoes .container {
         margin: 5px;
         padding: 0.5rem;
+        width: 100%;
+        margin-top: 5px;
     }
 
     .qualificacoes .container .row {
@@ -565,11 +568,6 @@ span {
         margin: 1rem;
         padding: 2rem 0.2rem 2 rem 0.2rem;
         gap: 1rem;
-    }
-
-    .qualificacoes .container {
-        margin-top: 5px;
-        width: 100%;
     }
 }
 
